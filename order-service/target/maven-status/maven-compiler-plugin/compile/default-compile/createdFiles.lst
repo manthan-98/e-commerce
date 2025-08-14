@@ -1,0 +1,6 @@
+com/shopeazy/order/order_service/service/OrderService.class
+com/shopeazy/order/order_service/controller/OrderController.class
+com/shopeazy/order/order_service/OrderServiceApplication.class
+com/shopeazy/order/order_service/service/OrderServiceImpl.class
+com/shopeazy/order/order_service/model/Order.class
+com/shopeazy/order/order_service/repository/OrderRepository.class

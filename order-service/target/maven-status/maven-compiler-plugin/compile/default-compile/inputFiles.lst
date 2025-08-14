@@ -1,6 +1,6 @@
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/OrderServiceApplication.java
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/controller/OrderController.java
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/model/Order.java
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/repository/OrderRepository.java
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/service/OrderService.java
-/Users/manthanm/Documents/Projects/Web Application/ShopEasy/order-service/src/main/java/com/shopeazy/order/order_service/service/OrderServiceImpl.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/OrderServiceApplication.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/controller/OrderController.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/model/Order.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/repository/OrderRepository.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/service/OrderService.java
+/Users/manthanm/Documents/Projects/GitDemo/e-commerce/order-service/src/main/java/com/shopeazy/order/order_service/service/OrderServiceImpl.java

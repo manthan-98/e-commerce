@@ -7,8 +7,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "orders")
 public class Order {
 	
 	@Id
@@ -17,7 +19,7 @@ public class Order {
 	
 	private Long userId;
 	private String status;
-	private Integer totalAmount;
+	private Long totalAmount;
 	
 	@Column(updatable = false)
 	private LocalDateTime createdAt;
@@ -26,7 +28,7 @@ public class Order {
 		super();
 	}
 
-	public Order(Long orderId, Long userId, String status, Integer totalAmount, LocalDateTime createdAt) {
+	public Order(Long orderId, Long userId, String status, Long totalAmount, LocalDateTime createdAt) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
@@ -59,11 +61,11 @@ public class Order {
 		this.status = status;
 	}
 
-	public Integer getTotalAmount() {
+	public Long getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(Integer totalAmount) {
+	public void setTotalAmount(Long totalAmount) {
 		this.totalAmount = totalAmount;
 	}
 
