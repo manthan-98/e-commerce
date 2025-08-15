@@ -1,6 +1,8 @@
 package com.shopeazy.notification.dto;
 
-public class OrderEvent {
+import java.io.Serializable;
+
+public class OrderEvent implements Serializable {
     private Long orderId;
 	private String email;
     private String productName;

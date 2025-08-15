@@ -13,7 +13,7 @@ public class MailServiceTests {
 	@Test
 	void mailtest() {
 		
-		mailService.sendMail("manthanmanta@gmail.com", "5th Attempt", "Installed Application");
+//		mailService.sendMail("manthanmanta@gmail.com", "5th Attempt", "Installed Application");
 		//"Hello This mail triggred because to Spring Bott test by running Junit"
 	}
 

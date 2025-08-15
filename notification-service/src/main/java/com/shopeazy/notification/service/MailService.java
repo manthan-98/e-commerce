@@ -5,11 +5,13 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 import com.shopeazy.notification.dto.OrderEvent;
 
 @Service
+@EnableAsync
 public class MailService {
 	
 	@Autowired
@@ -32,7 +34,7 @@ public class MailService {
 //		}
 //	}
 	@Async
-	@KafkaListener(topics = "notification-topic", groupId = "notification-group")
+	@KafkaListener(topics = "order-topic", groupId = "notification-group")
     public void consume(OrderEvent orderEvent) {
 		try {
 			System.out.println("📩 Notification Service received: " + orderEvent);

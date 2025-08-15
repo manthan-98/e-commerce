@@ -20,6 +20,7 @@ public class OrderServiceImpl implements OrderService{
 	
 	private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
 	
+	@Autowired
 	public OrderServiceImpl(KafkaTemplate<String, OrderEvent> kafkaTemplate) {
 		this.kafkaTemplate = kafkaTemplate;
 	}
@@ -35,8 +36,8 @@ public class OrderServiceImpl implements OrderService{
 		orderEvent.setQuantity(order.getQuantity());
 		order.setOrderId(UUID.randomUUID().getMostSignificantBits());
 		order.setCreatedAt(dateTime);
-		
+		kafkaTemplate.send("order-topic", orderEvent);
 		orderRepository.save(order);
-		kafkaTemplate.send("kafka", orderEvent);
+		
 	}
 }
