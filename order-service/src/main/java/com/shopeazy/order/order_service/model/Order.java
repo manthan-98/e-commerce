@@ -4,8 +4,6 @@ import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -14,27 +12,33 @@ import jakarta.persistence.Table;
 public class Order {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long orderId;
 	
 	private Long userId;
+	private String email;
+	private String productName;
+	private Long quantity;
 	private String status;
 	private Long totalAmount;
 	
 	@Column(updatable = false)
 	private LocalDateTime createdAt;
-
-	public Order() {
-		super();
-	}
-
-	public Order(Long orderId, Long userId, String status, Long totalAmount, LocalDateTime createdAt) {
+	
+	public Order(Long orderId, Long userId, String email, String productName, Long quantity, String status, Long totalAmount,
+			LocalDateTime createdAt) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
+		this.email = email;
+		this.productName = productName;
+		this.quantity = quantity;
 		this.status = status;
 		this.totalAmount = totalAmount;
 		this.createdAt = createdAt;
+	}
+
+	public Order() {
+		super();
 	}
 
 	public Long getOrderId() {
@@ -51,6 +55,22 @@ public class Order {
 
 	public void setUserId(Long userId) {
 		this.userId = userId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
 	public String getStatus() {
@@ -77,9 +97,12 @@ public class Order {
 		this.createdAt = createdAt;
 	}
 
-	@Override
-	public String toString() {
-		return "Order [orderId=" + orderId + ", userId=" + userId + ", status=" + status + ", totalAmount="
-				+ totalAmount + ", createdAt=" + createdAt + "]";
+	public Long getQuantity() {
+		return quantity;
 	}
+
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
+
 }

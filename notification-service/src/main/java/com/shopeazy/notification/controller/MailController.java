@@ -17,6 +17,6 @@ public class MailController {
 	
 	@PostMapping("/sent")
 	void sendAnEmail() {
-		mailService.sendMail("manthanmanta@gmail.com", "Spring Boot mail", "Mail sent through Controller class");
+	//	mailService.sendMail("manthanmanta@gmail.com", "Spring Boot mail", "Mail sent through Controller class");
 	}
 }
